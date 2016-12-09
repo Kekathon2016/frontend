@@ -1,0 +1,15 @@
+.clock {
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.clock-digits {
+    font-size: 10vh;
+}
