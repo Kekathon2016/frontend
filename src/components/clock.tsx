@@ -41,7 +41,7 @@ export class Clock extends React.Component<ClockProps, any> {
         clearInterval(this.intervalHandler);
     }
 
-    private padNumber(n: number): string {
+    private static padNumber(n: number): string {
         let res = n.toString(10);
         if (res.length == 1) {
             return `0${res}`;
@@ -50,9 +50,9 @@ export class Clock extends React.Component<ClockProps, any> {
     }
 
     render() {
-        let str = `${this.padNumber(this.state.hour)}:${this.padNumber(this.state.minute)}`;
+        let str = `${Clock.padNumber(this.state.hour)}:${Clock.padNumber(this.state.minute)}`;
         if (this.props.printSeconds) {
-            str = `${str}:${this.padNumber(this.state.second)}`;
+            str = `${str}:${Clock.padNumber(this.state.second)}`;
         }
 
         return <div className="clock">
