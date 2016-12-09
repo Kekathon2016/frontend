@@ -1,0 +1,22 @@
+{
+  "name": "cracathon2016-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for 2016 Cracathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/webpack"
+  },
+  "author": "Marek Rusinowski <marekrusinowski@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^0.14.54",
+    "@types/react-dom": "^0.14.19",
+    "awesome-typescript-loader": "^3.0.0-beta.10",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "source-map-loader": "^0.1.5",
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0"
+  }
+}
