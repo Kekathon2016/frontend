@@ -1,0 +1,39 @@
+.timetable {
+    width: 100%;
+    left: 0px;
+    margin: 55vh 15vw 0vh 15vw;
+    bottom: 20px;
+}
+
+.timetable-text {
+    z-index: 9999;
+    font-size: 5vh;
+}
+
+.timetable-visible {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.timetable-hidden {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+/*
+#slide {
+    position: absolute;
+    left: -100px;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}*/

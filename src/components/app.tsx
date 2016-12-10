@@ -5,6 +5,7 @@ import { Dispatcher, MsgHandlerId } from "../dispatcher";
 import { Welcome } from "./welcome";
 import { Swapper } from "./swapper";
 import { Weather } from "./weather";
+import { Timetable } from "./timetable";
 
 interface AppProps {
     dispatcher: Dispatcher
@@ -36,6 +37,7 @@ export class App extends React.Component<AppProps, any> {
                 <div>
                     <Clock printSeconds={false}/>
                     <Weather dispatcher={this.props.dispatcher}/>
+                    <Timetable dispatcher={this.props.dispatcher}/>
                 </div>
                 <div>asdasd</div>
             </Swapper>
