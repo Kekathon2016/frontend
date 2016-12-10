@@ -1,0 +1,13 @@
+.swapper-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swapper-elem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+}
