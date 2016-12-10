@@ -8,3 +8,11 @@
     color: white;
     font-family: 'Roboto', sans-serif;
 }
+
+.app-visible {
+    display: block;
+}
+
+.app-hidden {
+    display: none;
+}

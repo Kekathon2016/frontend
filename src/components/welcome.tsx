@@ -9,7 +9,7 @@ interface WelcomeProps {
 const showTimeout = 3; // seconds
 
 export class Welcome extends React.Component<WelcomeProps, any> {
-    private handerId: MsgHandlerId = null;
+    private handlerId: MsgHandlerId = null;
     private timeoutId: number = null;
 
     constructor(props: WelcomeProps) {
@@ -48,11 +48,11 @@ export class Welcome extends React.Component<WelcomeProps, any> {
     }
 
     componentDidMount() {
-        this.handerId = this.props.dispatcher.on('update_name', data => this.handleNameUpdate(data));
+        this.handlerId = this.props.dispatcher.on('update_name', data => this.handleNameUpdate(data));
     }
 
     componentWillUnmount() {
-        this.props.dispatcher.clear('update_name', this.handerId);
+        this.props.dispatcher.clear('update_name', this.handlerId);
     }
 
     render() {
