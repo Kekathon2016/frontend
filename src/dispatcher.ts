@@ -1,5 +1,6 @@
+
 type MsgHandler = (msg: any) => void
-type MsgHandlerId = number;
+export type MsgHandlerId = number;
 
 export class Dispatcher {
     private listeners: Map<string, Map<MsgHandlerId, MsgHandler>> = new Map();

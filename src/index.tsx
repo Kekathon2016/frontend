@@ -21,8 +21,16 @@ connection.onmessage = msg => {
 };
 
 ReactDOM.render(
-    <App/>,
-    document.getElementById("app")
+    <App dispatcher={dispatcher}/>,
+    document.getElementById('app')
 );
 
 connection.start();
+
+// Simple function to push messages to system. For debugging purposes.
+(window as any)['dispatch'] = (type: string, data: any) => {
+    dispatcher.dispatch({
+        type: type,
+        data: data
+    });
+};
