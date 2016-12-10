@@ -21,8 +21,8 @@ export class Swapper extends React.Component<SwapperProps, any> {
     private handleSwipe(data: any) {
         let dir: number = 0;
         switch (data.direction) {
-            case 'right': dir = 1; break;
-            case 'left': dir = -1; break;
+            case 'left': dir = 1; break;
+            case 'right': dir = -1; break;
         }
         const numChildren = React.Children.count(this.props.children);
         this.setState((prevState, props) => ({

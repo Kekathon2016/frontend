@@ -37,7 +37,14 @@ export class App extends React.Component<AppProps, any> {
                     <Clock printSeconds={false}/>
                     <Weather dispatcher={this.props.dispatcher}/>
                 </div>
-                <div>asdasd</div>
+                <div className="twitter">
+                    <h1>Twitter news feed</h1>
+                    <p><b>Elon Musk</b> <span className="user">@elonmusk</span></p>
+                    <p>Vote tally shows ~85% of unaffiliated shareholders in favor of the Tesla/SolarCity merger! Thanks for believing.</p>
+                    <p><b>Bill Gates</b> <span className="user">@billgates</span></p>
+                    <p>Our work is not possible without dedicated partners and staff around the world. We are happy to accept the Medal of Freedom on their behalf.</p>
+
+                </div>
             </Swapper>
             <Welcome dispatcher={this.props.dispatcher}/>
         </div>;
