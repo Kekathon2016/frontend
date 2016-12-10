@@ -4,6 +4,7 @@ import { Clock } from "./clock";
 import { Dispatcher, MsgHandlerId } from "../dispatcher";
 import { Welcome } from "./welcome";
 import { Swapper } from "./swapper";
+import { Weather } from "./weather";
 
 interface AppProps {
     dispatcher: Dispatcher
@@ -32,7 +33,10 @@ export class App extends React.Component<AppProps, any> {
     render() {
         return <div className={this.state.visible ? 'app-visible' : 'app-hidden'}>
             <Swapper dispatcher={this.props.dispatcher}>
-                <Clock printSeconds={false}/>
+                <div>
+                    <Clock printSeconds={false}/>
+                    <Weather dispatcher={this.props.dispatcher}/>
+                </div>
                 <div>asdasd</div>
             </Swapper>
             <Welcome dispatcher={this.props.dispatcher}/>
