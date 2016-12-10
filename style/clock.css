@@ -3,7 +3,7 @@
     width: 25%;
     height: 20%;
     right: 5%;
-    top: 5%;
+    top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,5 +11,5 @@
 }
 
 .clock-digits {
-    font-size: 10vh;
+    font-size: 10vmin;
 }

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { Dispatcher, MsgHandlerId } from "../dispatcher";
+import Skycons from "react-skycons";
 
 interface WeatherProps {
     dispatcher: Dispatcher
@@ -18,7 +19,7 @@ export class Weather extends React.Component<WeatherProps, any> {
 
     private handleWeatherUpdate(data: any) {
         this.setState({
-            weather: data
+            weather: data.currently
         })
     }
 
@@ -30,13 +31,22 @@ export class Weather extends React.Component<WeatherProps, any> {
         this.props.dispatcher.clear('weather', this.handlerId);
     }
 
+    private static fixIconName(name: string): string {
+        return name.toUpperCase().replace(/-/g, '_');
+    }
+
     render() {
         if (this.state.weather === null) {
             return null;
         }
 
         return <div className="weather">
-            {this.state.weather.currently.summary}
+            <div className="weather-skycon">
+                <Skycons color='white' icon={Weather.fixIconName(this.state.weather.icon)} />
+            </div>
+            <div className="weather-temperature">{this.state.weather.temperature | 0}°</div>
+            <div className="weather-summary">{this.state.weather.summary}</div>
+            <div className="weather-wind">Wind: {this.state.weather.windSpeed} km/h</div>
         </div>
     }
 }
